@@ -80,6 +80,7 @@ function drawClassifyMenu() {
 
 	textSize(50);
 	textAlign(CENTER);
+	text(poseLabel, windowWidth / 2, 50);
 	text(poseTarget[currentPose], windowWidth / 2, webcam.height + 50);
 	text("Score: " + currentPoseScore, windowWidth / 2, webcam.height + 100);
 
