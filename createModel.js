@@ -117,7 +117,7 @@ function loadNeuralNetwork() {
 	}
 
 	neuralNet = ml5.neuralNetwork(neuralNetOptions);
-	neuralNet.loadData("data/testData.json", dataLoaded);
+	neuralNet.loadData("data/testDataCombined.json", dataLoaded);
 }
 
 // Call back when data is loaded

@@ -199,9 +199,9 @@ function loadNeuralNetwork() {
 	neuralNet = ml5.neuralNetwork(neuralNetOptions);
 
 	let modelDetails = {
-		model: 'model/test_model/model.json',
-		metadata: 'model/test_model/model_meta.json',
-		weights: 'model/test_model/model.weights.bin'
+		model: 'model/model_head_tilt/model.json',
+		metadata: 'model/model_head_tilt/model_meta.json',
+		weights: 'model/model_head_tilt/model.weights.bin'
 	}
 
 	neuralNet.load(modelDetails, modelLoaded);
