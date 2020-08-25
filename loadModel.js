@@ -10,6 +10,7 @@ let poseTarget = ["head_tilt_left_with_hand",
 					"head_tilt_right_with_hand"];
 let currentPose = 0;
 let currentPoseScore = 0;
+let poseImage = [];
 
 
 
@@ -22,6 +23,9 @@ function setup() {
 	loadWebcam();
 	loadPoseNet();
 	loadNeuralNetwork();
+
+	poseImage.push(loadImage("assets/head_tilt_left_with_hand.jpg"));
+	poseImage.push(loadImage("assets/head_tilt_right_with_hand.jpg"));
 }
 
 function draw() {
@@ -83,6 +87,8 @@ function drawClassifyMenu() {
 	text(poseLabel, windowWidth / 2, 50);
 	text(poseTarget[currentPose], windowWidth / 2, webcam.height + 50);
 	text("Score: " + currentPoseScore, windowWidth / 2, webcam.height + 100);
+
+	image(poseImage[currentPose], windowWidth / 2 - poseImage[currentPose].width / 2,  webcam.height - poseImage[currentPose].height);
 
 	pop();
 }
